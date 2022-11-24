@@ -7,10 +7,10 @@ All other approaches we have tried:
 CRF{25D_crf.py}, TTA{25D_tta_ensenble.py}, predicting more slides without labels{Predict_more.py}, mmsegmentation{reference 1}
 
 Potential reasons for other approaches above does not better than our final solution:
-CRF: grayscale MRI images were used
-Predicting more slides without labels: test set also have images without labels
-TTA: organs have relative positions, and vertical/horizontal flips may induce bias?
-mmsegmentation: it is a great approach, but we do not have enough time to refine this approach 
+1. CRF: grayscale MRI images were used
+2. Predicting more slides without labels: test set also have images without labels
+3. TTA: organs have relative positions, and vertical/horizontal flips may induce bias?
+4. mmsegmentation: it is a great approach, but we do not have enough time to refine this approach 
 
 
 References:
