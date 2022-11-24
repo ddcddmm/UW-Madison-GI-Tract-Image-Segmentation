@@ -1,12 +1,21 @@
 # UW-Madison-GI-Tract-Image-Segmentation
 *** Bronze Medal Awarded, Top 10% (149/1548) ***
 
-I want to start this README by thanking my teammates @dssdee @Apolaris and @Jiqing. They were really helpful, and I have learned from them a lot since we have merged. Our final solution was a blend of 2.5D models with psueudo-label. Using imagenet pretraining weight and resnext101 as backbone.
+I want to start this README by thanking my teammates @dssdee @Apolaris and @Jiqing. They were really helpful, and I have learned from them a lot since we have merged. Our final solution was a blend of 2.5D models with psueudo-label {25D_pseudolabel.py}. Using imagenet pretraining weight and resnext101 as backbone. 
 
 All other approaches we have tried:
-CRF, TTA, predicting more slides without labels, mmsegmentation
+CRF{25D_crf.py}, TTA{25D_tta_ensenble.py}, predicting more slides without labels{Predict_more.py}, mmsegmentation{reference 1}
+
+Potential reasons for other approaches above does not better than our final solution:
+CRF: grayscale MRI images were used
+Predicting more slides without labels: test set also have images without labels
+TTA: organs have relative positions, and vertical/horizontal flips may induce bias?
+mmsegmentation: it is a great approach, but we do not have enough time to refine this approach 
 
 
-In this competition we are segmenting organs cells in images. The training annotations are provided as *RLE-encoded masks, and the images are in 16-bit grayscale PNG format*.
-
-Each case in this competition is represented by multiple sets of scan slices (each set is identified by the day the scan took place). Some cases are split by time (early days are in train, later days are in test) while some cases are split by case - the entirety of the case is in train or test. The goal of this competition is to be able to generalize to both partially and wholly unseen cases.
+References:
+1. MMsegmentation end-to-end notebook  https://www.kaggle.com/competitions/uw-madison-gi-tract-image-segmentation/discussion/323921
+2. Pseudo-label https://www.youtube.com/watch?v=SsnWM1xWDu4
+3. UWMGI: 2.5D stride=2 Data; https://www.kaggle.com/code/awsaf49/uwmgi
+4. UWMGI: 2.5D [Train] [PyTorch] https://www.kaggle.com/code/awsaf49/uwmgi
+5. UWMGI: 2.5D [Infer] [PyTorch] https://www.kaggle.com/code/awsaf49/uwmgi
