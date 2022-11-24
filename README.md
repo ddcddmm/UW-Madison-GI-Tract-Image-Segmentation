@@ -1,5 +1,5 @@
 # UW-Madison-GI-Tract-Image-Segmentation
-*** Bronze Medal Awarded, Top 10% (149/1548) ***
+*** Bronze Medal Awarded, Top 10% (149/1548) *** https://www.kaggle.com/ddcddmm
 
 I would like to start this README by thanking my teammates @dssdee @Apolaris and @Jiqing. They were really helpful, and I have learned from them a lot since we have merged. Our final solution was a blend of 2.5D models with psueudo-label {25D_pseudolabel.py}. Using imagenet pretraining weight and resnext101 as backbone. 
 
