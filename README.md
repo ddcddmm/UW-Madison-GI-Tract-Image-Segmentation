@@ -1,7 +1,7 @@
 # UW-Madison-GI-Tract-Image-Segmentation
 *** Bronze Medal Awarded, Top 10% (149/1548) ***
 
-I want to start this README by thanking my teammates @dssdee @Apolaris and @Jiqing. They were really helpful, and I have learned from them a lot since we have merged. Our final solution was a blend of 2.5D models with psueudo-label {25D_pseudolabel.py}. Using imagenet pretraining weight and resnext101 as backbone. 
+I would like to start this README by thanking my teammates @dssdee @Apolaris and @Jiqing. They were really helpful, and I have learned from them a lot since we have merged. Our final solution was a blend of 2.5D models with psueudo-label {25D_pseudolabel.py}. Using imagenet pretraining weight and resnext101 as backbone. 
 
 All other approaches we have tried:
 CRF{25D_crf.py}, TTA{25D_tta_ensenble.py}, predicting more slides without labels{Predict_more.py}, mmsegmentation{reference 1}
